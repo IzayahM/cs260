@@ -1,1 +1,14 @@
+This program will add/ subtract colored marbles to a bag.
 
+a marble will be represented with an integer value corresponding to a color ex. red = 1 green = 2 blue = 3
+this could be done with a bag class that has attributes that are different colors as well as bag size.
+
+the program will ask which color of marble they would like to add by entering the corresponding number and then how many marbles to add with a cap of 20
+this will be done by calling add_marb(int color, int quant)
+if(color == 1)
+red += quant;
+
+The program will also be able to subtract marbles by using the same method as mentioned before.
+the function that this would use is sub_marb(int color, int quant)
+if(color == 1)
+red -= quant;
