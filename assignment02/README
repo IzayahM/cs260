@@ -1,0 +1,14 @@
+This program will be a queue data structure with the ability to pop and push elements onto a stack.
+This can be done using an array of ten and a pointer pointing to the last and first element that was put into this array. 
+There would need to be a function that updates the queue to reflect the moving pointer to move to the next in the queue.
+The first pointer will stop moving once it reaches the last pointer
+
+I drew a model of how I think this would work called the queue model
+
+For a list data structure that we can add or delete values at a given location, we would need a separate function for both of those.
+  I would make the list a linked list by creating a node class with a *next pointer for a value to point to, as well as an ID to identify a value in the linked list.
+  To add there would be the function void add(list **head_ref, id) that adds a node to the linked list behind whatever Id is inputted. This function would create a new node
+    and attach it behind the given id.
+  To delete a node I would do this by deleting by id where it connects the two pointers on either side of the selected node and disconnects the current node.
+This would be done with void delete(list **head_ref, id) function where the user inputs which node they want to delete by id.
+We would need to know the values of the position of the items in the linked list which can be displayed to the user so they can add/delete items on the list.
