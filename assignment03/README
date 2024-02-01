@@ -1,0 +1,11 @@
+This program will be a linked queue data structure. 
+
+it will use a hpp file for the queue and node classes.
+The node class will have an id and a pointer pinting to the next node. 
+
+The queue class will have a pointer pointing to the front and the rear of the queue which will initially both be set to null.
+This class will feature an enqueue and dequeue function.
+The enqueue function will create a new node, if the queue is empty both front and rear pointers will point to this node.
+If the queue has an item existing it will point to the rear of the queue.
+The dequeue function will first check to see if the queue is empty.
+If it is not it will take the first element and point it to a temporary pointer, it will then take the front and pint it to the next in queue then delete the temp pointer.
