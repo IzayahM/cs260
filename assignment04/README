@@ -1,0 +1,30 @@
+This program will be using a linked list to insert, delete, and display values at given positions in the list.
+There will be two classes used, the Node class and the List class.
+The list class will use the node class for the head of the node and will also have the insert, delete, and display functions.
+The node class will store a value and position for items in the linked list.
+
+The insert(int val, int pos) function will create a new node and insert it into the list. 
+It will check to see if the list is empty to assign this node to the head.
+If the list has an existing node it will compare the position value to all others in the list and insert itself in the position behind the greater position value.
+for (I = 0; new_node->pos > i && current != nullptr; ++i);
+  current = current->next;
+the node will then be inserted behind current
+new_node->next = current->next;
+current->next = new_node;
+
+The remove(int pos) function will delete the node that is at the current position.
+It will first check to see if the list is empty, if not then it will see if the position is at 1.
+if the pos == 1 then the list will not be traversed the head will just be set to the next node then deleted using a tmp pointer.
+For any other pos value there will be two pointers created:
+Node *current = head;
+Node *tmp = NULL;
+The pos entered will be compared against the current's stored pos value.
+for (pos > current->pos );
+  tmp = current;
+  current->next;
+The tmp is being used to track the position before the desired item to connect the ->next values before and after current (i think that makes sense)
+tmp->next = current->next
+delete current;
+
+The display function will be simple and just display all of the nodes values (val, pos)
+It will first check to see if the list is empty, if not, then it will iterate through the list displaying the two values until it reaches NULL.
