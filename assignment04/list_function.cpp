@@ -43,7 +43,7 @@ void list::remove(int position) {
         cout << "List is empty!" << endl;
         return;
     }
-
+    //with this I dont have to create two nodes
     if (position == 1){
         node *current = head;
         head = head->next;
@@ -54,7 +54,7 @@ void list::remove(int position) {
 
     node *current = head;
     node *tmp = nullptr;
-
+    //iterates through until the current pointer == position
     while (current != nullptr && current->pos != position) {
         tmp = current;
         current = current->next;
@@ -78,7 +78,7 @@ void list::display(){
 
 int main(){
     list linked_list;
-
+//some tests
     linked_list.remove(2);
     linked_list.display();
     linked_list.insert(1,1);
