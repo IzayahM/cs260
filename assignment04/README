@@ -28,3 +28,9 @@ delete current;
 
 The display function will be simple and just display all of the nodes values (val, pos)
 It will first check to see if the list is empty, if not, then it will iterate through the list displaying the two values until it reaches NULL.
+
+I included a screenshot of the requirements.
+The time comlexity I think would be O(n) for the insert function with best case being the first psoition or an empty list.
+This is because it could have to iterate over n items in a list depending on the size comparing values.
+The time complexity of the remove function would be similar for the same reasons O(n) with best case being O(1) if the item being removed was the first in the list.
+
