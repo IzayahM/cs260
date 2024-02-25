@@ -10,7 +10,15 @@ Binarynode *root;
 Binarynode* find_node(Binarynode *quarry){
 //I am not sure if I will actually implement this I just realized its kind of useless for my 
 // current plan, I might use this to find a min or max value on either side of the tree using a while loop.
-  
+
+Binarynode* insert_node(Binarynode *parent, int value){
+  if (root == null)
+    root = new Binarynode(value)
+  else if (value < root-> value)
+    root-left = insert_node(root->left, value)
+  else if // same thing for right value but greater
+ return root;
+}
   // This is from session 20 Ill probably change some of this during the implementation
 BinaryNode *BinarySearchTree::locate_parent(int proposed_value) {
     if(root == nullptr) {
@@ -29,6 +37,28 @@ BinaryNode *BinarySearchTree::locate_parent(int proposed_value) {
             current = current->right;
         }
     }
+//from session 20
+BinaryNode *BinarySearchTree::locate_parent(int proposed_value) {
+    if(root == nullptr) {
+        return nullptr;
+    }
+
+    BinaryNode *current = root;
+    while(current->left != nullptr || current->right != nullptr) {
+        if(proposed_value < current->value && current->left == nullptr) {
+            break;
+        } else if (proposed_value >= current->value && current->right == nullptr) {
+            break;
+        } else if(proposed_value < current->value) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+
+    return current;
+}
+
   //I am going to try to implement a recurcsive way of doing this
     Binarynode* delete_node( int value){
       Binarynode *parent = root
