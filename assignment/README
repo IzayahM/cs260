@@ -1,0 +1,54 @@
+This assignment will use a modified version of the code used in class for session 20 winter 2024.
+
+There will be a Binarynode class that has three parts : an int value and two pointer Binarynode *left & Binarynode *right.
+A Binarytree class that has three functions: add_node, delet_node, find_node, and locate_parent because I really liked how that one worked.
+
+The structure will be:
+class Binarytree {
+Binarynode *root;
+  
+Binarynode* find_node(Binarynode *quarry){
+//I am not sure if I will actually implement this I just realized its kind of useless for my 
+// current plan, I might use this to find a min or max value on either side of the tree using a while loop.
+  
+  // This is from session 20 Ill probably change some of this during the implementation
+BinaryNode *BinarySearchTree::locate_parent(int proposed_value) {
+    if(root == nullptr) {
+        return nullptr;
+    }
+  
+    BinaryNode *current = root;
+    while(current->left != nullptr || current->right != nullptr) {
+        if(proposed_value < current->value && current->left == nullptr) {
+            break;
+        } else if (proposed_value >= current->value && current->right == nullptr) {
+            break;
+        } else if(proposed_value < current->value) {
+            current = current->left;
+        } else {
+            current = current->right;
+        }
+    }
+  //I am going to try to implement a recurcsive way of doing this
+    Binarynode* delete_node( int value){
+      Binarynode *parent = root
+      Binarynode *temp = null
+      if(root == NULL)
+        return null
+      if(root->val > value)
+        root->right = delete_node(root->right, value)
+      if(root->val < value)
+        root->left = delete_node(root->left, value)
+      //value found
+      else(
+        //first case : parent has no children
+        //second case: parent has a child
+        //third case: parent has two children
+        )
+        }
+    return parent;
+  }
+
+  Binarynode* add_node( int new_value){
+        Binarynode *new_node = new Binarynode{new_value, nullptr, nullptr};
+        
