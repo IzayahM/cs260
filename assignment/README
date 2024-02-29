@@ -82,3 +82,8 @@ BinaryNode *BinarySearchTree::locate_parent(int proposed_value) {
   Binarynode* add_node( int new_value){
         Binarynode *new_node = new Binarynode{new_value, nullptr, nullptr};
         
+########################################################################################
+
+I think that this program Big O would be O(logn) because the program iterates through the tree with logic instead of randomly searching. 
+If the root was 50 and there is a leaf 20 somewhere in the tree the program would know to go left and not right which has the potential to save a lot of time.
+However, I am pretty sure I made a mistake using a recursive method because the worst case in my program could be o(n) or I think o (n logn).
