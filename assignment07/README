@@ -1,0 +1,18 @@
+We can store data in a hash table in C++ by creating a hash table class with the following features:
+A way to hash the items that has a key in this implementation I will use a string. When being hashed the key will be assigned a hash value thats
+determined by the characters in that string. 
+    for (char c : value) {
+        result += (int)c;
+    }
+An insert function that inserts an item into the table and callls the hash function. This insertion will also check for collisions after hashing.
+      int bucket = hash(value);
+and if there is a collision when inserting the item the previous value will be overwritten.
+And a search function that you can search for a string to see if it is in the hash table.
+
+Some tests:
+  HashTable ht(15)
+result = ht.insert("clementine")
+result = ht.insert("howly")
+
+cout << ht.search("howly") << endl
+cout << ht.search("clementine") << endl
