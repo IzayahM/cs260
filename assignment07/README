@@ -9,6 +9,12 @@ An insert function that inserts an item into the table and callls the hash funct
 and if there is a collision when inserting the item the previous value will be overwritten.
 And a search function that you can search for a string to see if it is in the hash table.
 
+My original design did not include the 2nd version of the hash table because I did not read that far so my bad.
+I will be implementing chaining because I am more comforatable with linked lists. 
+I will add a node struct in the header as well as create the nodes when the insert() function gets called.
+
+I will also try to implement a remove function in the second version.
+
 Some tests:
   HashTable ht(15)
 result = ht.insert("clementine")
