@@ -50,4 +50,15 @@ Shortest path will try to compare weights of the edges between connected sources
 
 Tests for this function will be included in a .jpg 
 
+sources used:
+https://www.geeksforgeeks.org/graph-and-its-representations/
+https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-algorithm-greedy-algo-2/
+
+Time Complexity for completed work:
+
+For min span tree: O(E logE) E represents edges, this is due to the sorting of edges
+shortestPath: O(E +V^2) because the algorithm might have to go over all vertices 
+addvertex: O(n) resizes vector
+addEdge: O(1) appends to list
+
 
