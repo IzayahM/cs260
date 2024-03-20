@@ -1,0 +1,53 @@
+This final project will be a minimum spanning tree graph. The graph is built using Kruskal’s algorithm with a shortest path function Using Dijksra’s algorithm. 
+
+
+
+This will feature two classes: an Edge class and a Graph class.
+
+class Edge {
+public:
+    int source;
+    int destination;
+    int weight;
+
+    Edge(int src, int dest, int w) : source(src), destination(dest), weight(w) {}
+}
+
+class Graph {
+private:
+    int Vert;
+    vector<vector<int>*> neighbors;
+    vector<Edge*> edges;
+
+public:
+    Graph(int vertices);
+    void addVertex();
+    void addEdge(int src, int dest, int weight);
+    vector<int> shortestPath(int source, int destination);
+    vector<Edge*> minSpanTree();
+    ~Graph();
+
+Private:
+//helper functions
+    int minDistance(vector<int>& distance, vector<bool>& visited);
+    int find(vector<int>& parent, int i);
+}
+
+This can be used for real life application to give directions on the shortest path to somewhere from your starting position.
+
+The edges being roads that lead to the destination. Weight being length, destination is where the road leads, and source is where that road starts.
+
+The graph is where each instance of these are stored, the vertex being the source. In this program they will be stored in the neighbors list.
+The minimum spanning tree will be created by taking all edges added which creates vertices when added. It will then start connecting vertices with their respected destination and weight
+
+Here is the test for this function:
+for (Edge* edge : minSpanTree) {
+cout << edge->source << " - " << edge->destination << " : " << edge->weight << endl;
+}
+To display all vertices and edges w/ weights
+
+Shortest path will try to compare weights of the edges between connected sources and decide the shortest path.
+
+Tests for this function will be included in a .jpg 
+
+
